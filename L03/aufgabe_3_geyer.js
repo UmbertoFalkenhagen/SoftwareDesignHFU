@@ -1,0 +1,25 @@
+"use strict";
+console.log("Start");
+let eingabe = prompt("Geben Sie den Satz ein: ", "Satz eingeben");
+console.log(reverseChars(reverseWords(eingabe)));
+console.log(reverseWords(eingabe));
+console.log(reverseChars(eingabe));
+function reverseWords(eingabe) {
+    let reArray;
+    reArray = eingabe.split(" ");
+    reArray = reArray.reverse();
+    let returnS;
+    returnS = reArray.toString();
+    return returnS;
+}
+function reverseChars(eingabe) {
+    let reArray;
+    for (let i = 0; i != eingabe.length - 1; i++) {
+        reArray[i] = eingabe.charAt(i);
+    }
+    reArray = reArray.reverse();
+    let returnS;
+    returnS = reArray.toString();
+    return returnS;
+}
+//# sourceMappingURL=aufgabe_3_geyer.js.map
