@@ -5,22 +5,21 @@ console.log(reverseWords(eingabe));
 console.log(reverseChars(eingabe));
 
 function reverseWords(eingabe: string): string {
-    let reArray: string[];
+    let reArray: string[] = [];
     reArray = eingabe.split(" ");
     reArray = reArray.reverse();
     let returnS: string;
-    returnS = reArray.toString();
+    returnS = reArray.join(" ");
     return returnS;
 }
 
 function reverseChars(eingabe: string): string {
-    let reArray: string[];
-    for (let i: number = 0; i != eingabe.length - 1; i++) {
+    let reArray: string[] = [];
+    for (let i: number = 0; i != eingabe.length; i++) {
         reArray[i] = eingabe.charAt(i);
     }
     reArray = reArray.reverse();
     let returnS: string;
-    returnS = reArray.toString();
+    returnS = reArray.join("");
     return returnS;
 }
-
